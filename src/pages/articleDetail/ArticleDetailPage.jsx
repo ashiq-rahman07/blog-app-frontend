@@ -4,6 +4,7 @@ import { images } from '../../constants';
 import BreadCrumbs from '../../components/BreadCrumbs';
 import { Link } from 'react-router-dom';
 import SuggestedPosts from './container/SuggestedPosts';
+import CommentsContainer from '../../components/comments/CommentsContainer';
 
 
 
@@ -85,6 +86,7 @@ const ArticleDetailPage = () => {
           </div>
 
         </article>
+        <CommentsContainer className='mt-10' />
 
         <div>
           <SuggestedPosts
