@@ -85,8 +85,9 @@ const ArticleDetailPage = () => {
             </p>
           </div>
 
+        <CommentsContainer className='mt-10' logginUserId='a' />
         </article>
-        <CommentsContainer className='mt-10' />
+        
 
         <div>
           <SuggestedPosts
@@ -96,6 +97,7 @@ const ArticleDetailPage = () => {
             className="mt-8 lg:mt-0 lg:max-w-xs"
            />
         </div>
+
       </section>
     </MainLayout>
   )
