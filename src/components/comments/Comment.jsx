@@ -31,7 +31,7 @@ const Comment = ({
   const repliedCommentId = parentId ? parentId : comment._id;
   const repliyedOnUserId = comment.user._id;
 
-  
+
   return (
     <div className='flex flex-nowrap items-start gap-x-3 bg-[#F2F4F5] P-3 rounded-lg'>
 
@@ -39,7 +39,7 @@ const Comment = ({
 
       <div className="flex-1 flex flex-col">
 
-        <h5 className='font-bold text-dark-hard text-xs'>{comment.user.name}</h5>
+        <h5 className='font-bold text-dark-hard text-xs lg:text-sm'>{comment.user.name}</h5>
         <span className='text-xs text-dark-light'>
           {new Date(comment.createdAt).toLocaleDateString("en-US", {
                   day: "numeric",
