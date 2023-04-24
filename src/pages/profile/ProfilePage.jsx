@@ -9,7 +9,7 @@ import MainLayout from "../../components/MainLayout";
 // import ProfilePicture from "../../components/ProfilePicture";
 import { userActions } from "../../store/reducers/userReducers";
 import { toast } from "react-hot-toast";
-import { getUserProfile } from "../../services/index/users";
+import { getUserProfile, updateProfile } from "../../services/index/users";
 import ProfilePicture from "../../components/ProfilePicture";
 
 const ProfilePage = () => {
@@ -72,14 +72,16 @@ const ProfilePage = () => {
   });
 
   const submitHandler = (data) => {
-    const { name, email, password } = data;
-    mutate({ name, email, password });
+    const {name,email, password} = data;
+    mutate({name, email, password});
   };
+ 
 
   return (
     <MainLayout>
       <section className="container mx-auto px-5 py-10">
         <div className="w-full max-w-sm mx-auto">
+          <p>{profileData?.name}</p>
           <ProfilePicture avatar={profileData?.avatar}/>
           
           <form onSubmit={handleSubmit(submitHandler)}>
